@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  php:
+    build:
+      context: .
+    ports:
+      - "80:80"
+    networks:
+      - front-net
+    volumes:
+      - "$PWD:/var/www/html"
+
+networks:
+  front-net:
+    driver: bridge

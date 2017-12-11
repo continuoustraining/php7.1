@@ -21,6 +21,13 @@ class ComposerStaticInit6e68242e7e06fdc5f6ee00afb20e79f3
     );
 
     public static $prefixesPsr0 = array (
+        'Z' => 
+        array (
+            'Zend_' => 
+            array (
+                0 => __DIR__ . '/..' . '/zendframework/zendframework1/library',
+            ),
+        ),
         'D' => 
         array (
             'Doctrine\\Common\\Collections\\' => 

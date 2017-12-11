@@ -2,7 +2,8 @@
     "name": "sofrecom/php-training",
     "type": "project",
     "require": {
-        "doctrine/collections": "^1.5"
+        "doctrine/collections": "^1.5",
+        "zendframework/zendframework1": "^1.12"
     },
     "autoload": {
         "psr-4": {
