@@ -1,0 +1,12 @@
+{
+    "name": "sofrecom/php-training",
+    "type": "project",
+    "require": {
+        "doctrine/collections": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sofrecom\\Training\\": "src/"
+        }
+    }
+}
