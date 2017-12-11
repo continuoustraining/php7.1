@@ -7,12 +7,17 @@ class MyService {
      * @param integer $time
      * @return string
      */
-    public function getTime($time)
+    public function getTime($time=null)
     {
-        return date('c', $time);
+        if ($time) {
+            return date('c', $time);
+        } else {
+            return date('c');
+        }
     }
 }
 
+ini_set('soap.wsdl_cache_enabled', 0);
 
 if (isset($_GET['wsdl'])) {
     $server = new Zend_Soap_AutoDiscover();
@@ -26,6 +31,6 @@ if (isset($_GET['wsdl'])) {
     $server->setClass(MyService::class);
     $server->setUri('http://localhost/soap-server.php');
     $response = $server->handle();
-    error_log($response);
+    error_log($response, E_NOTICE);
     echo $response;
 }
