@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class A {
     private $val = 'hello';
     
@@ -18,5 +20,5 @@ class B extends A {
 
 $obj = new B;
 $test = $obj->val;
-
+var_dump($test);
 echo $obj->foo($test);

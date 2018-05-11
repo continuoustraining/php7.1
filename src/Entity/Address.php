@@ -82,16 +82,16 @@ class Address implements PersistableInterface
     /**
      * @return User
      */
-    public function getUser(): User
+    public function getUser(): ?User
     {
         return $this->user;
     }
 
     /**
      * @param User $user
-     * @return Address
+     * @return $this
      */
-    public function setUser(User $user): Address
+    public function setUser(User $user=null): Address
     {
         $this->user = $user;
         return $this;

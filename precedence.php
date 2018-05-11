@@ -15,6 +15,6 @@ function test3($value) {
     return $value;
 }
 
-if (true || test1(false) || test2(true) or test3(true)) {
+if (false || test1(false) || test2(true) or test3(true)) {
     echo " PHP";
 }
