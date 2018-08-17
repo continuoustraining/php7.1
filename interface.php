@@ -1,7 +1,7 @@
 <?php
 
 interface Interface1 {
-    public function getFoo() : ?int;
+    public function getFoo() : int;
     
     public function setFoo($value);
 }
@@ -13,7 +13,7 @@ interface Interface2 {
 }
 
 class Baz implements Interface1, Interface2 {
-    public function getFoo(string $scope=null) : ?int
+    public function getFoo(string $scope=null) : int
     {
         return 'foo';
     }

@@ -36,7 +36,9 @@ class A {
     }
 }
 
+
 $instance = new A;
+// $invokable2 = [$instance, '__invoke'];
 $bCallable = [$instance, 'b'];
 $cCallable = ['A', 'c'];
 $dCallable = $instance;

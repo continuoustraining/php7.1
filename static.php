@@ -4,11 +4,11 @@ class A {
     public static $toto;
     
     public static function foo() {
-        return self::class;
+        return static::class;
     }
     public function __toString()
     {
-        return self::foo();
+        return static::foo();
     }
 }
 

@@ -2,11 +2,11 @@
 
 $name = "Héro";
 
-$heredoc = <<<TEST
+$heredoc = <<<TEST1
 
 toto le "$name" \u{1F601}
 
-TEST;
+TEST1;
 
 echo $heredoc . PHP_EOL;
 
