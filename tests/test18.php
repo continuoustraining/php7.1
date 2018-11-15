@@ -6,3 +6,4 @@ $foo = new stdClass();
 $foo->{null} = 'bar';
 
 var_dump($foo->{''});
+echo serialize($foo);

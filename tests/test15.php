@@ -7,7 +7,7 @@ $toto = function ()
     }
 };
 
-var_dump($toto());
+var_dump($toto);
 
 /**
  * A. null

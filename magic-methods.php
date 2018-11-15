@@ -4,6 +4,42 @@ class Magic {
     protected $foo;
     
     protected $say;
+
+    /**
+     * @return mixed
+     */
+    public function getFoo()
+    {
+        return $this->foo;
+    }
+
+    /**
+     * @param mixed $foo
+     * @return Magic
+     */
+    public function setFoo($foo)
+    {
+        $this->foo = $foo;
+        return $this;
+    }
+
+    /**
+     * @return callable
+     */
+    public function getSay()
+    {
+        return $this->say;
+    }
+
+    /**
+     * @param callable $say
+     * @return Magic
+     */
+    public function setSay($say)
+    {
+        $this->say = $say;
+        return $this;
+    }
     
     public function __construct(callable $say)
     {
@@ -17,7 +53,8 @@ class Magic {
     
     public function __get($name)
     {
-        return $this->$name;
+//        return $this->$name;
+        return $this->{'get' . ucfirst($name)}();
     }
     
     public function __isset($name)

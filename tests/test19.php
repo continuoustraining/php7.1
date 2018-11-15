@@ -7,4 +7,3 @@ $foo = 'bar';
 
 echo $$foo;
 
-Throwable::
