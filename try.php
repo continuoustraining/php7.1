@@ -22,4 +22,6 @@ try {
     echo $e;
     echo 'continue script';
     throw new Exception('An exception occured', 500, $e);
+} finally {
+    echo PHP_EOL . 'Hello World!' . PHP_EOL;
 }

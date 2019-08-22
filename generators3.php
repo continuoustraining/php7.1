@@ -14,7 +14,7 @@ function getLogsArray() {
     return file('test.log');
 }
 
-foreach (getLogsArray() as $entry) {
+foreach (getLogs() as $entry) {
     $date = new DateTime(substr($entry, 1, 10));
     echo $date->format('c') . ":" . substr($entry, 12) . PHP_EOL;
 }

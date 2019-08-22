@@ -11,6 +11,6 @@ foreach($arr as &$val) {
 }
 
 foreach($arr as $key => $val) {
-	print_r(array_sum($arr));
+        print_r(array_sum($arr));
 	exit;
 }

@@ -16,7 +16,11 @@ $foo = new foo();
 
 $bar = new bar();
 
+/* Which statement(s) trigger(s) a Fatal Error? */
+// A.
 $foo();
-// $bar(); Fatal Error
+// B.
+$bar();
+// C.
 $barCallable = [$bar, 'invoke'];
 $barCallable();

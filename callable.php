@@ -2,8 +2,12 @@
 
 declare(strict_types=1);
 
-$b = 'Bar';
+function toto() {
+    echo 'toto';
+}
 
+$b = 'Bar';
+// A.
 $mySecondFunction = function (string $string=null) : ?string {
     return $string ? strtoupper($string) : null;
 };
@@ -36,11 +40,15 @@ class A {
     }
 }
 
-
 $instance = new A;
 // $invokable2 = [$instance, '__invoke'];
+// B.
 $bCallable = [$instance, 'b'];
+// C.
 $cCallable = ['A', 'c'];
+// D.
 $dCallable = $instance;
 $instance();
-
+// E.
+$eCallable = 'toto';
+$eCallable();
